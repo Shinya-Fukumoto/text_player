@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		function voice_play(){
+			var synthes = new SpeechSynthesisUtterance(
+				$("#message").val()
+			);
+			synthes.lang = "ja-JP"
+			speechSynthesis.speak( synthes );
+		}
+	</script>
+</head>
+<body>
+	<textarea id="message" style="width:400px;height:300px;">サンプルメッセージです。この内容を編集して再生ボタンを押して下さい。</textarea>
+	<button onclick="voice_play()">再生</button>
+</body>
